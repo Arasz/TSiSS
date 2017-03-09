@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/arasz/ontologies/2017/2/pizza-ontology#"
+     xml:base="http://www.semanticweb.org/arasz/ontologies/2017/2/pizza-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/pizza-ontology">
+        <rdfs:comment>Ontologia opisujaca rozne rodzaje pizzy</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maCiasto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maCiasto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maCzęść"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Ciasto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maCzęść -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maCzęść">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maCzęść"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Dodatek"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/pizza-ontology#Vesuvio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/pizza-ontology#Vesuvio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PizzaWegetariańska"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#SosPomidorowy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Szynka"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Cebula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Cebula">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekWarzywny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Ciasto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Ciasto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#CiastoCienkie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#CiastoCienkie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Ciasto"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#CiastoGrube"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#CiastoGrube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#CiastoGrube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Ciasto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Dodatek -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Dodatek"/>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekMięsny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekMięsny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Dodatek"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekSerowy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekSerowy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Dodatek"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekWarzywny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekWarzywny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Dodatek"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#KiełbasaPepperoni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#KiełbasaPepperoni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekMięsny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Margherita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Margherita">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#NazwanaPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#SosPomidorowy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Pizza która ma dodatki: sos pomidorowy i mozzarella</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Mozzarella -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Mozzarella">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekSerowy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Parmesan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#NazwanaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#NazwanaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PapryczkaChili -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PapryczkaChili">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Papryka"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PaprykaJalapeno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Papryka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Papryka">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekWarzywny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PaprykaJalapeno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PaprykaJalapeno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Papryka"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Parmesan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Parmesan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekSerowy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pepperoni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pepperoni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#NazwanaPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#KiełbasaPepperoni"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#SosPomidorowy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PikantnySosPomidorowy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PikantnySosPomidorowy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#SosPomidorowy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maCiasto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Ciasto"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PizzaWegetariańska -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PizzaWegetariańska">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekMięsny"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PizzaZMięsem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#PizzaZMięsem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#maDodatek"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekMięsny"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pomidor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pomidor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekWarzywny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Salami -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Salami">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekMięsny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Sos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Sos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Dodatek"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#SosPomidorowy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#SosPomidorowy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Sos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Szynka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Szynka">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekMięsny"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Cebula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Papryka"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pomidor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Ciasto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Dodatek"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Pizza"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekMięsny"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekSerowy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#DodatekWarzywny"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Sos"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#KiełbasaPepperoni"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Salami"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arasz/ontologies/2017/2/untitled-ontology-2#Szynka"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
